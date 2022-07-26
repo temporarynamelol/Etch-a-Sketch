@@ -10,10 +10,7 @@ body {
     display: flex;
 }
 
-.block {
-    display: inline;
-}
-.inline {
+.squares {
     height: 16px;
     width: 16px;
     border: solid;
