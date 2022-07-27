@@ -7,16 +7,22 @@ body {
     border: solid;
     border-color: black;
     border-width: 0.5px;
-    display: flex;
+    width: 800px;
+    height: 800px;
+    display: inline-flex;
+}
+
+.columns {
+    display: inline;
+    flex: 1 1 0%;
 }
 
 .squares,
 .blackSquare {
-    height: 16px;
-    width: 16px;
     border: solid;
     border-color: black;
     border-width: 0.5px;
+    aspect-ratio: 1 / 1;
 }
 
 .blackSquare {
