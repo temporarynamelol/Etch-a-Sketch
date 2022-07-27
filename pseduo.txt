@@ -28,3 +28,9 @@ problems
         display inline
     }
 
+problem 2:
+
+    const squares = queryselectall .squares
+
+    squares.foreach square 
+        square addeventlistner ('hover', () => {square.setatrribute style = black})

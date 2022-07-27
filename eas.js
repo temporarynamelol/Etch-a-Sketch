@@ -20,3 +20,12 @@ function gridMaker (size) {
 
 gridMaker(16);
 
+const squares = document.querySelectorAll('.squares');
+
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        square.classList.remove('sqaures');
+        square.classList.add('blackSquare');
+    });
+})
+

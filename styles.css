@@ -10,7 +10,8 @@ body {
     display: flex;
 }
 
-.squares {
+.squares,
+.blackSquare {
     height: 16px;
     width: 16px;
     border: solid;
@@ -18,5 +19,8 @@ body {
     border-width: 0.5px;
 }
 
+.blackSquare {
+    background-color: black;
+}
 
 
