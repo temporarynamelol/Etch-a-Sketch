@@ -49,10 +49,22 @@ body {
     background-color: black;
 }
 
-.red {
-    background-color: red;
+.yellow{
+    background-color: #ffd600;
 }
 
 .blue {
-    background-color: blue;
+    background-color: #6a77dd;
+}
+
+.pink {
+    background-color: #ff2f8e;
+}
+
+.green {
+    background-color: #66df48;
+}
+
+.purple {
+    background-color: #9803ce;
 }

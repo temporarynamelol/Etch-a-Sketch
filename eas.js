@@ -31,6 +31,18 @@ function toBlack () {
 
 }
 
+function toRgb() {
+    const squares = document.querySelectorAll('.squares');
+    let pallet = ['yellow', 'blue', 'pink', 'green', 'purple']
+        squares.forEach((square) => {
+        let color = pallet[Math.floor(Math.random()*pallet.length)];
+        square.addEventListener('mouseover', () => {
+            square.setAttribute('style', `background-color: ${color}`)
+        });
+    })
+
+}
+
 function clearGrid() {
     const bSquares = document.querySelectorAll('.blackSquare')
     bSquares.forEach((bSquare) => {
@@ -65,4 +77,4 @@ sizes.forEach((selection) => {
     })
 
 gridMaker(16);
-toBlack();
+toRgb();
