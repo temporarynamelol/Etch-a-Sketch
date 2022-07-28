@@ -13,7 +13,12 @@ body {
 #header {
     font-family: 'damagePlan';
     font-size: 75px;
+    margin-bottom: 10px;
 
+}
+
+.selections {
+    margin: 10px;
 }
 
 .container {
