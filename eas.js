@@ -24,11 +24,19 @@ function toBlack () {
 
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
-            square.classList.remove('sqaures');
+            square.classList.remove('squares');
             square.classList.add('blackSquare');
         });
     })
 
+}
+
+function clearGrid() {
+    const bSquares = document.querySelectorAll('.blackSquare')
+    bSquares.forEach((bSquare) => {
+        bSquare.classList.remove('blackSquare');
+        bSquare.classList.add('squares');
+    });
 }
 
 
@@ -37,6 +45,8 @@ sizes.forEach((selection) => {
 
     let size = selection.id.toLocaleLowerCase();
     selection.addEventListener('click', () => {
+
+        
         if(size == '16') {
             container.innerHTML = '';
             gridMaker(16);
@@ -46,6 +56,8 @@ sizes.forEach((selection) => {
         } else if (size == '64') {
             container.innerHTML = '';
             gridMaker(64);
+        } else if (size == 'clear') {
+            clearGrid();
         }
 
         toBlack();
@@ -53,4 +65,5 @@ sizes.forEach((selection) => {
     
     })
 
-
+gridMaker(16);
+toBlack();
