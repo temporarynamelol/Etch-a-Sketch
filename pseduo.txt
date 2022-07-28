@@ -1,36 +1,14 @@
-problems
-1. 16X16 grid of divs
-    solution? take argument in grid function (for now will just be 16) create 16 block divs and inside of each of those divs create 16 inline divs
+function toRgb() {
+    const squares = document.querySelectorAll('.squares');
+    let pallet = ['red', 'blue']
+    let color = pallet[Math.floor(Math.random()*pallet.length)];
+        squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.setAttribute('style', `background-color: ${color}`)
+        });
+    })
 
-    html: 
-    one container div in html
+}
 
-    javascript:
 
-    container = document.querysecltor .container
 
-    javascript for i < 16 i++
-    block = document.createelement(div)
-    block.classlist add "block"
-    container.appendchild block
-        for j < 16 j++
-            inline = document.createelement div
-            inline.addclasslist inline
-            block.appendchild inline
-
-    css:
-
-    .block {
-        display block
-    }
-
-    .inline {
-        display inline
-    }
-
-problem 2:
-
-    const squares = queryselectall .squares
-
-    squares.foreach square 
-        square addeventlistner ('hover', () => {square.setatrribute style = black})

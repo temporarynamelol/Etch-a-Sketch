@@ -39,7 +39,6 @@ function clearGrid() {
     });
 }
 
-
 let sizes = document.querySelectorAll('.buttons');
 sizes.forEach((selection) => {
 
