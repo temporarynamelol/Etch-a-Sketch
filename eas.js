@@ -1,8 +1,9 @@
 
+//main container holding all other divs
+const container = document.querySelector('.container');
+
 //takes argument of which size grid (aka if size = 16 this will create a 16x16 grid)
 function gridMaker (size) {
-    //main container holding all other divs
-    const container = document.querySelector('.container');
     //create columns divs in range of size variable
     for (let i = 0; i < size; i++) {
         const columns = document.createElement('div');
@@ -18,14 +19,38 @@ function gridMaker (size) {
     }
 }
 
-gridMaker(16);
+function toBlack () {
+    const squares = document.querySelectorAll('.squares');
 
-const squares = document.querySelectorAll('.squares');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.classList.remove('sqaures');
+            square.classList.add('blackSquare');
+        });
+    })
 
-squares.forEach((square) => {
-    square.addEventListener('mouseover', () => {
-        square.classList.remove('sqaures');
-        square.classList.add('blackSquare');
-    });
-})
+}
+
+
+let sizes = document.querySelectorAll('.buttons');
+sizes.forEach((selection) => {
+
+    let size = selection.id.toLocaleLowerCase();
+    selection.addEventListener('click', () => {
+        if(size == '16') {
+            container.innerHTML = '';
+            gridMaker(16);
+        } else if (size == '32') {
+            container.innerHTML = '';
+            gridMaker(32);
+        } else if (size == '64') {
+            container.innerHTML = '';
+            gridMaker(64);
+        }
+
+        toBlack();
+    })
+    
+    })
+
 
