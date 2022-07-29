@@ -19,7 +19,7 @@ function gridMaker (size) {
     }
 }
 
-let color = 'blue';
+let pallet = ['pink', 'blue']
 let on = false;
 
 const switcher = document.querySelector('#switch');
@@ -27,10 +27,8 @@ const switcher = document.querySelector('#switch');
 switcher.addEventListener('click', () => {
     if(!on) {
         on = true;
-        color = 'red';
     } else {
         on = false
-        color = 'black';
     }
 }); 
 
@@ -39,7 +37,12 @@ function toBlack () {
 
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
-            square.setAttribute('style', `background-color: ${color}`)
+            if(on) { 
+                square.setAttribute('style', `background-color: ${pallet[Math.floor(Math.random()*pallet.length)]};`)
+            } else {
+                square.setAttribute('style', `background-color: black;`)
+            }
+            
         });
     })
 
