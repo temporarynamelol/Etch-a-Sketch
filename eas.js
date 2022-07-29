@@ -19,7 +19,7 @@ function gridMaker (size) {
     }
 }
 
-let pallet = ['pink', 'blue']
+let pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313']
 let on = false;
 
 const switcher = document.querySelector('#switch');
