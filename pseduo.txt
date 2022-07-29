@@ -10,5 +10,6 @@ function toRgb() {
 
 }
 
+const switch = document.querySelector('.switch');
 
 

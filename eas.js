@@ -19,23 +19,25 @@ function gridMaker (size) {
     }
 }
 
+let color = 'blue';
+let on = false;
+
+const switcher = document.querySelector('#switch');
+
+switcher.addEventListener('click', () => {
+    if(!on) {
+        on = true;
+        color = 'red';
+    } else {
+        on = false
+        color = 'black';
+    }
+}); 
+
 function toBlack () {
     const squares = document.querySelectorAll('.squares');
 
     squares.forEach((square) => {
-        square.addEventListener('mouseover', () => {
-            square.classList.remove('squares');
-            square.classList.add('blackSquare');
-        });
-    })
-
-}
-
-function toRgb() {
-    const squares = document.querySelectorAll('.squares');
-    let pallet = ['yellow', 'blue', 'pink', 'green', 'purple']
-        squares.forEach((square) => {
-        let color = pallet[Math.floor(Math.random()*pallet.length)];
         square.addEventListener('mouseover', () => {
             square.setAttribute('style', `background-color: ${color}`)
         });
@@ -43,11 +45,11 @@ function toRgb() {
 
 }
 
+
 function clearGrid() {
-    const bSquares = document.querySelectorAll('.blackSquare')
-    bSquares.forEach((bSquare) => {
-        bSquare.classList.remove('blackSquare');
-        bSquare.classList.add('squares');
+    const colorSquares = document.querySelectorAll('.squares')
+    colorSquares.forEach((colorSquare) => {
+        colorSquare.setAttribute('style', 'background-color: grey;')
     });
 }
 
@@ -77,4 +79,4 @@ sizes.forEach((selection) => {
     })
 
 gridMaker(16);
-toRgb();
+toBlack();
