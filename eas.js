@@ -32,7 +32,7 @@ switcher.addEventListener('click', () => {
     }
 }); 
 
-function toBlack () {
+function draw () {
     const squares = document.querySelectorAll('.squares');
 
     squares.forEach((square) => {
@@ -76,10 +76,10 @@ sizes.forEach((selection) => {
             clearGrid();
         }
 
-        toBlack();
+        draw();
     })
     
     })
 
 gridMaker(16);
-toBlack();
+draw();

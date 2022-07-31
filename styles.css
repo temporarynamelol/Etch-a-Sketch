@@ -37,34 +37,10 @@ body {
     flex: 1 1 0%;
 }
 
-.squares,
-.blackSquare {
+.squares {
     border: solid;
     border-color: lightgrey;
     border-width: 0.5px;
     aspect-ratio: 1 / 1;
 }
 
-.blackSquare {
-    background-color: black;
-}
-
-.yellow{
-    background-color: #ffd600;
-}
-
-.blue {
-    background-color: #6a77dd;
-}
-
-.pink {
-    background-color: #ff2f8e;
-}
-
-.green {
-    background-color: #66df48;
-}
-
-.purple {
-    background-color: #9803ce;
-}
