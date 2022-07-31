@@ -1,16 +1,18 @@
-
+const switcher = document.querySelector('#switch');
+let on = false;
 //main container holding all other divs
 const container = document.querySelector('.container');
+const pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313']
 
-//takes argument of which size grid (aka if size = 16 this will create a 16x16 grid)
-function gridMaker (size) {
-    //create columns divs in range of size variable
-    for (let i = 0; i < size; i++) {
+//takes argument of which optionID grid (aka if optionID = 16 this will create a 16x16 grid)
+function gridMaker (optionID) {
+    //create columns divs in range of optionID variable
+    for (let i = 0; i < optionID; i++) {
         const columns = document.createElement('div');
         columns.classList.add('columns');
         container.appendChild(columns);
-        //create squares divs in range of size var
-        for (let j = 0; j < size; j++) {
+        //create squares divs in range of optionID var
+        for (let j = 0; j < optionID; j++) {
             const squares = document.createElement('div');
             squares.classList.add('squares');
             columns.appendChild(squares);
@@ -18,11 +20,6 @@ function gridMaker (size) {
 
     }
 }
-
-let pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313']
-let on = false;
-
-const switcher = document.querySelector('#switch');
 
 switcher.addEventListener('click', () => {
     if(!on) {
@@ -52,27 +49,27 @@ function draw () {
 function clearGrid() {
     const colorSquares = document.querySelectorAll('.squares')
     colorSquares.forEach((colorSquare) => {
-        colorSquare.setAttribute('style', 'background-color: grey;')
+        colorSquare.setAttribute('style', 'background-color: white;')
     });
 }
 
-let sizes = document.querySelectorAll('.buttons');
-sizes.forEach((selection) => {
+let options = document.querySelectorAll('.buttons');
+options.forEach((option) => {
 
-    let size = selection.id.toLocaleLowerCase();
-    selection.addEventListener('click', () => {
+    let optionID = option.id.toLocaleLowerCase();
+    option.addEventListener('click', () => {
 
         
-        if(size == '16') {
+        if(optionID == '16') {
             container.innerHTML = '';
             gridMaker(16);
-        } else if (size == '32') {
+        } else if (optionID == '32') {
             container.innerHTML = '';
             gridMaker(32);
-        } else if (size == '64') {
+        } else if (optionID == '64') {
             container.innerHTML = '';
             gridMaker(64);
-        } else if (size == 'clear') {
+        } else if (optionID == 'clear') {
             clearGrid();
         }
 
