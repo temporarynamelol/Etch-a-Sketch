@@ -26,10 +26,10 @@ function gridMaker (optionID) {
 switcher.addEventListener('change', () => {
     if(!on) {
         on = true;
-        switchText.textContent = "Current Color: Rainbow" //Change current color
+        switchText.textContent = "Toggle to Black" //Change current color
     } else {
         on = false
-        switchText.textContent = "Current Color: Black" //Change current color
+        switchText.textContent = "Toggle to Rainbow" //Change current color
     }
 }); 
 
