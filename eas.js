@@ -1,11 +1,7 @@
-//Creates on/off switch to toggle color or black
-const switcher = document.querySelector('#switch');
-//dictates whether color is toggled on or off, off by default
-let on = false;
-//main container holding all other divs
-const container = document.querySelector('.container');
-//color pallet that draw uses in color mode
-const pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313']
+const switcher = document.querySelector('.switch'); //Creates on/off switch to toggle color or black
+let on = false; //dictates whether color is toggled on or off, off by default
+const container = document.querySelector('.container'); //main container used to create grid 
+const pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313'] //color pallet that draw uses in color mode
 
 //takes argument of which optionID grid (aka if optionID = 16 this will create a 16x16 grid)
 function gridMaker (optionID) {
@@ -25,7 +21,7 @@ function gridMaker (optionID) {
 }
 
 //listens for the color witch to be toggled, turns on or off
-switcher.addEventListener('click', () => {
+switcher.addEventListener('change', () => {
     if(!on) {
         on = true;
     } else {
@@ -35,8 +31,7 @@ switcher.addEventListener('click', () => {
 
 //main function to draw on grid
 function draw () {
-    //querys every grid square on the page
-    const squares = document.querySelectorAll('.squares');
+    const squares = document.querySelectorAll('.squares'); //querys every grid square on the page
     //for each square
     //on mouseover
     //set the background color to either black or color
@@ -66,11 +61,10 @@ function clearGrid() {
 //this querys all buttons with the class '.buttons'
 let options = document.querySelectorAll('.buttons');
 options.forEach((option) => {
-    //receives the buttonID from the button when clicked
-    let optionID = option.id.toLocaleLowerCase();
+    let optionID = option.id.toLocaleLowerCase();  //receives the buttonID from the button when clicked
     option.addEventListener('click', () => {
 
-        //passes the selected size option to griMaker()
+        //passes the selected size option to gridMaker()
         if(optionID == '16') {
             container.innerHTML = '';
             gridMaker(16);
@@ -84,8 +78,7 @@ options.forEach((option) => {
         } else if (optionID == 'clear') {
             clearGrid();
         }
-        //calls the draw function again
-        draw();
+        draw(); //calls the draw function again
     })
     
     })
