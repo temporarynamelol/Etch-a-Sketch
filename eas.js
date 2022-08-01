@@ -1,4 +1,6 @@
 const switcher = document.querySelector('.switch'); //Creates on/off switch to toggle color or black
+const switchText = document.querySelector('.switchText'); //The text displayed before the switch
+switchText.textContent = "Current color: Black"
 let on = false; //dictates whether color is toggled on or off, off by default
 const container = document.querySelector('.container'); //main container used to create grid 
 const pallet = ['#37A1CB', '#EBE91B', '#D83682', '#3B8313'] //color pallet that draw uses in color mode
@@ -24,8 +26,10 @@ function gridMaker (optionID) {
 switcher.addEventListener('change', () => {
     if(!on) {
         on = true;
+        switchText.textContent = "Current Color: Rainbow" //Change current color
     } else {
         on = false
+        switchText.textContent = "Current Color: Black" //Change current color
     }
 }); 
 

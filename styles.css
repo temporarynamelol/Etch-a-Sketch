@@ -3,6 +3,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #4ABDAC;
+    font-family: 'Bebas Neue';
 }
   
 #header {
@@ -44,6 +45,10 @@ body {
     border-color: lightgrey;
     border-width: 1px;
     aspect-ratio: 1 / 1;
+}
+
+.switchText {
+    font-size: 24px;
 }
 
 /* The following code is all for the rainbow on/off switch */
