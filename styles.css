@@ -18,6 +18,9 @@ body {
 
 .selections {
     margin: 10px;
+    display: flex;
+    align-items: center;
+    width: 600px;
 }
 
 .container {
@@ -43,7 +46,11 @@ body {
     aspect-ratio: 1 / 1;
 }
 
+/* The following code is all for the rainbow on/off switch */
+
 .switch {
+    margin-left: 8px;
+    margin-right: auto;
     position: relative;
     display: inline-block;
     width: 60px;
