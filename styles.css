@@ -49,8 +49,19 @@ body {
 
 .switchText {
     font-size: 24px;
+    color: white;
 }
 
+.buttons {
+    margin: 4px;
+    background: #e62143;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    color: white;
+}
 /* The following code is all for the rainbow on/off switch */
 
 .switch {
@@ -75,7 +86,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);;
+    background: black;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -93,11 +104,11 @@ body {
   }
 
   input:checked + .slider {
-    background: black;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);;
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px black;
+    box-shadow: 0 0 1px linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);;
   }
 
   input:checked + .slider:before {
